@@ -1,7 +1,6 @@
 import App from 'next/app';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import Navbar from '../components/Navbar';
-import theme from '../static/cssTheme';
+import theme from '../public/static/cssTheme';
 
 const GlobalStyle = createGlobalStyle`
 body, html{
@@ -36,7 +35,6 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Navbar />
         <Component {...pageProps} />
       </ThemeProvider>
     );
